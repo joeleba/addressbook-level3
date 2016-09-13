@@ -76,6 +76,43 @@ Use case ends.
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
 
+#### Use case: Edit tag
+
+**Actor**: User
+
+**Preconditions**: The person and tag exist.
+
+**MSS**
+
+1. User requests to list persons
+2. AddressBook shows a list of persons
+3. User requests to view the tags of a specific person
+4. AddressBook shows a list of that person's tags
+5. User requests to edit a specific tag in the list to a new value
+6. AddressBook updates the specified tag with the new value <br>
+Use case ends.
+
+**Extensions**
+
+2a. The list is empty
+
+> Use case ends
+
+3a. The given person index is invalid
+
+> 3a1. AddressBook shows an error message <br>
+  Use case resumes at step 2
+
+5a. The given tag index is invalid
+
+> 5a1. AddressBook shows an error message <br>
+  Use case resumes at step 4
+
+5a. The given tag format is invalid
+
+> 5a1. AddressBook shows an error message <br>
+  Use case resumes at step 4
+
 ## Appendix C : Non Functional Requirements
 
 1. Should work on any [mainstream OS](#mainstream-os) as long as it has Java 8 or higher installed.
